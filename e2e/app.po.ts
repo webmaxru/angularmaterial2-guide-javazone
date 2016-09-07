@@ -1,3 +1,5 @@
+import { browser, element, by } from 'protractor/globals';
+
 export class Angularmaterial2GuideJavazonePage {
   navigateTo() {
     return browser.get('/');
