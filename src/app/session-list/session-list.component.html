@@ -1,0 +1,14 @@
+<md-list>
+  <md-list-item *ngFor="let session of sessions">
+    <img md-list-avatar src="{{session.speakers[0].photoUrl}}" alt="{{session.speakers[0].name}}">
+    <h3 md-line>
+      {{session.title}}
+    </h3>
+    <p md-line>
+      <small>{{session.room}}</small>
+    </p>
+    <ul md-line>
+      <li *ngFor="let speaker of session.speakers">{{speaker.name}}</li>
+    </ul>
+  </md-list-item>
+</md-list>

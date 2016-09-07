@@ -1,0 +1,7 @@
+md-sidenav {
+  width: 200px;
+}
+
+md-list-item md-icon {
+  margin-right: 0.5em;
+}

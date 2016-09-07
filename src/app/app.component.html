@@ -1,4 +1,80 @@
-<h1>
-  {{title}}
-  <button md-raised-button>Test button</button>
-</h1>
+<app>
+  <md-sidenav-layout>
+    <md-sidenav #sidenav mode="push">
+
+      <md-list dense>
+        <h3 md-subheader>JavaZone 2016</h3>
+        <md-list-item (click)="eee">
+          <md-icon>assignment</md-icon>
+          Program
+        </md-list-item>
+        <md-list-item>
+          <md-icon>build</md-icon>
+          Workshops
+        </md-list-item>
+        <md-list-item>
+          <md-icon>info</md-icon>
+          Info
+        </md-list-item>
+        <md-list-item>
+          <md-icon>credit_card</md-icon>
+          Tickets
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-item>
+          <md-icon>account_circle</md-icon>
+          My Account
+        </md-list-item>
+      </md-list>
+
+    </md-sidenav>
+
+    <md-toolbar color="accent">
+
+      <button md-icon-button (click)="sidenav.open()">
+        <md-icon>menu</md-icon>
+      </button>
+
+      <span>{{title}}</span>
+
+      <span style="flex: 1 1 auto;"></span>
+
+      <button md-icon-button>
+        <md-icon>account_circle</md-icon>
+      </button>
+
+    </md-toolbar>
+
+    <md-tab-group>
+
+      <md-tab>
+        <template md-tab-label>Sessions</template>
+        <template md-tab-content>
+
+            <session-list></session-list>
+
+        </template>
+      </md-tab>
+
+      <md-tab>
+        <template md-tab-label>Edit session</template>
+        <template md-tab-content>
+
+          <session-detail></session-detail>
+
+        </template>
+      </md-tab>
+
+      <md-tab>
+        <template md-tab-label>My account</template>
+        <template md-tab-content>
+
+          <my-account></my-account>
+
+        </template>
+      </md-tab>
+
+    </md-tab-group>
+
+  </md-sidenav-layout>
+</app>
