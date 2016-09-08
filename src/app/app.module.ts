@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SessionListComponent } from './session-list/session-list.component';
-import { SessionService }          from './session.service';
+import { SessionService } from './session.service';
 
 @NgModule({
   declarations: [
